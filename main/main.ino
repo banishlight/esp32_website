@@ -1,6 +1,7 @@
 #include <WiFi.h>
 #include <WebServer.h>
 #include "wifi_info.hpp"
+#include "frontpage.hpp"
 
 WebServer server(80);
 
@@ -22,7 +23,10 @@ void wifi_setup() {
   Serial.println(WiFi.localIP()); // Print the IP address of the ESP32
 
   // Set up server routes
-  server.on("/", handleRoot);
+  // server.on("/", handleRoot);
+  server.on("/", []() {
+    server.send(200, "text/html", htmlContent);
+  });
   server.begin();
 }
 
