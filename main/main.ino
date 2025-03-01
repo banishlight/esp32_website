@@ -1,7 +1,10 @@
 #include <WiFi.h>
 #include <WebServer.h>
 #include "wifi_info.hpp"
-#include "frontpage.hpp"
+// #include "frontpage.hpp"
+// #include "frontpage3.hpp"
+#include "frontpage4.hpp"
+#include "projects.hpp"
 
 WebServer server(80);
 
@@ -25,10 +28,10 @@ void wifi_setup() {
   // Set up server routes
   // server.on("/", handleRoot);
   server.on("/", []() {
-    server.send(200, "text/html", htmlContent);
+    server.send(200, "text/html", frontpage4);
   });
   server.on("/projects", []() {
-    server.send(200, "text/html", NULL);
+    server.send(200, "text/html", projects);
   });
   server.on("/about-me", []() {
     server.send(200, "text/html", NULL);

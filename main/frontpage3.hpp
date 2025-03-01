@@ -1,3 +1,6 @@
+#pragma once
+
+const char* frontpage3 = R"=====(
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,3 +92,4 @@
 
 </body>
 </html>
+)=====";

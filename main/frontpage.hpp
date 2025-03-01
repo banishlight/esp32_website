@@ -1,7 +1,6 @@
-#ifndef HTML_CONTENT_HPP
-#define HTML_CONTENT_HPP
+#pragma once
 
-const char* htmlContent = R"=====(
+const char* frontpage = R"=====(
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,5 +37,3 @@ const char* htmlContent = R"=====(
 </body>
 </html>
 )=====";
-
-#endif
