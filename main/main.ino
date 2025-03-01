@@ -27,6 +27,15 @@ void wifi_setup() {
   server.on("/", []() {
     server.send(200, "text/html", htmlContent);
   });
+  server.on("/projects", []() {
+    server.send(200, "text/html", NULL);
+  });
+  server.on("/about-me", []() {
+    server.send(200, "text/html", NULL);
+  });
+  server.on("/contact", []() {
+    server.send(200, "text/html", NULL);
+  });
   server.begin();
 }
 
